@@ -1,0 +1,289 @@
+body {
+    background:rgb(10, 8, 8);
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+            color:#ffffff8b;
+    margin: 0;
+    padding: 0;
+  }
+@media screen  and (max-width:767px){
+    body{
+        margin: 0px;
+        margin: 0px;
+      
+     }
+     
+     .glassAndInfo{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        padding:10px;
+       }
+     .backHome {
+        margin:5px;
+        text-decoration: none;
+        background:green;
+        color:aliceblue;
+        padding:5px;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+     p{
+        font-size:normal;
+        word-wrap: wrap;
+        margin:5px;
+     }
+     .welcomeIntro{
+        padding-left: 5px;
+    }
+    .container{
+        box-shadow:2px 5px 4px 3px black; 
+
+        margin:10px;
+
+
+    }
+     .itemsContainer {
+        margin:10px;
+         display: flex;
+         justify-content:space-evenly;
+         flex-direction: column;
+         margin-bottom:0px;
+
+      width:100%;
+      height:100%;
+      width:fit-content;
+      gap:1rem;
+      }
+      .itemsContainer>div{
+        color:gray;
+         font-weight: bold;
+ 
+     }
+     .photo {
+         display: flex;
+         height:100%;
+         width:100%;
+
+     }
+     .glassAndInfo{
+      display:flex;
+      flex-direction: column;
+      color:gray;
+     } 
+     .inputSearch {
+         padding:5px;
+         padding-left:10px;
+         border-radius: 5px;
+         width:80%;
+     }
+    .glassAndInfo {
+         display: flex;
+         justify-content: space-between;
+         gap:2rem;
+     }
+}
+@media screen  and (min-width:767px) and (max-width:1023px){
+    .welcomeIntro{
+        padding-left: 5px;
+    }
+    .container{
+        box-shadow:-1px 5px 4px 3px black; 
+
+        margin:30px;
+
+
+    }
+    .itemsContainer {
+        display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+     width:fit-content;
+     
+     height:300px;
+     
+     }
+     .itemsContainer>div{
+        
+        display: flex;
+        flex-direction: column;
+        color:gray;
+        font-weight: bold;
+ 
+     }
+     .itemsContainer>div:hover{
+        transform: scale(1.1);
+    
+        cursor: pointer;
+     }
+    .photo {
+        height:100%;
+        width:100%;
+
+    }
+    .glassAndInfo{
+     display:flex;
+     flex-direction: column;
+     align-items: center;
+     padding:10px;
+    }
+    
+    .inputSearch {
+        padding:3px;
+        border-radius: 5px;
+        width:20%;
+        margin:20px;
+    }
+    .btns:hover {
+        cursor: pointer;
+    }
+    .closeTap {
+        margin-left:-45px;
+    }
+    .cartNav {
+        display: flex;
+        justify-content:space-between;
+       height:30px;
+        background:rgba(0, 0, 0, 0.624);
+        color:white;
+        padding:20px;
+    }
+    .h3 {
+
+        font-size: 15px;
+        display: flex;
+        justify-content:flex-start;
+        gap:1rem;
+        color:whitesmoke;
+
+    }
+    .backHome {
+      margin:5px;
+      text-decoration: none;
+      background:green;
+      color:aliceblue;
+      padding:5px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+  
+    
+   
+
+   
+    .glassAndInfo {
+        display: flex;
+        justify-content: space-between;
+        gap:2rem;
+    }
+  
+    .photo {
+         
+        height:150px;
+        width:150px;
+    }
+}
+
+@media screen  and (min-width:1024px){
+  
+    .welcomeIntro{
+        padding-left: 5px;
+    }
+    .container{
+        box-shadow:-1px 5px 4px 3px black; 
+
+        margin:30px;
+
+
+    }
+    .itemsContainer {
+        display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+     width:fit-content;
+     
+     height:300px;
+     
+     }
+     .itemsContainer>div{
+        
+        display: flex;
+        flex-direction: column;
+        color:gray;
+        font-weight: bold;
+ 
+     }
+     
+    .photo {
+        height:100%;
+        width:100%;
+
+    }
+    .itemsContainer>div:hover{
+        transform: scale(1.1);
+    
+        cursor: pointer;
+     }
+    .glassAndInfo{
+     display:flex;
+     flex-direction: column;
+     align-items: center;
+     padding:10px;
+    }
+    
+    .inputSearch {
+        padding:3px;
+        border-radius: 5px;
+        width:20%;
+        margin:20px;
+    }
+    .btns:hover {
+        cursor: pointer;
+    }
+    .closeTap {
+        margin-left:-45px;
+    }
+    .cartNav {
+        display: flex;
+        justify-content:space-between;
+       height:30px;
+        background:rgba(0, 0, 0, 0.624);
+        color:white;
+        padding:20px;
+    }
+    .h3 {
+
+        font-size: 15px;
+        display: flex;
+        justify-content:flex-start;
+        gap:1rem;
+        color:whitesmoke;
+
+    }
+    .backHome {
+      margin:5px;
+      text-decoration: none;
+      background:green;
+      color:aliceblue;
+      padding:5px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+  
+    
+   
+
+   
+    .glassAndInfo {
+        display: flex;
+        justify-content: space-between;
+        gap:2rem;
+    }
+  
+    .photo {
+         
+        height:200px;
+        width:200px;
+    }
+}
