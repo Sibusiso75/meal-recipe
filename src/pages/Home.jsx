@@ -51,7 +51,7 @@ useEffect(()=>{
                :
                 <div >
 
-                  <button onClick={()=>navigate("/login")}>Login</button>
+                  <button onClick={()=>navigate("/login")}>Log in</button>
                 </div>
             
      } 
