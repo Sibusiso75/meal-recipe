@@ -15,8 +15,8 @@ function ResetPassword() {
        axios.post(`https://mealapp-api-2.onrender.com/reset-password/${token}`, 
            {password}).then(response =>{
             if(response.data.status){
-                navigate("/login")
                 toast.success("Password has been successfully updated")
+                navigate("/login")
             }
         }).catch(err =>{
             console.log("Error")

@@ -22,6 +22,8 @@ let navigate = useNavigate()
                }
         }).catch(err =>{
             console.log("Error")
+            toast.error("Error")
+
         })
     }
   return (
