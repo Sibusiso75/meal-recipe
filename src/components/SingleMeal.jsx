@@ -82,7 +82,7 @@ function SingleCocktail() {
   const { name, image, category, instructions, ingredients, area} =
     cocktail;
   return (
-    <div style={{background:"black", color:"gray"}} >
+    <div>
       <br />
       <Link to="/" className ="backHome">Back home</Link>
       <div>

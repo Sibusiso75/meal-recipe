@@ -16,10 +16,10 @@ function SearchForm() {
       <form onSubmit={(e) => e.preventDefault()}>
         <input
           type="text"
+
           ref={searchValue}
           placeholder="search your favourite meal..."
           onChange={searchCocktail}
-          className="inputSearch"
         />
       </form>
     </section>

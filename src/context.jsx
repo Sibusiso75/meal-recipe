@@ -6,8 +6,11 @@ const AppContext = React.createContext();
 function AppProvider({ children }) {
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("a");
+  const [username, setUsername] = useState("")
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+    const [loggedIn, setLoggedIn]= useState(false)
   const [cocktails, setCocktails] = useState([]);
-  const [darkMode, setDarkMode] = useState(true);
 
   const getData = useCallback(async () => {
     setLoading(true);
@@ -32,7 +35,7 @@ function AppProvider({ children }) {
       }
       setLoading(false);
     } catch (error) {
-      console.log(error);
+      console.log("error");
     }
   }, [searchTerm]);
 
@@ -44,9 +47,16 @@ function AppProvider({ children }) {
       value={{
         loading,
         setSearchTerm,
+        loggedIn, 
+        setLoggedIn,
         cocktails,
-        darkMode,
-        setDarkMode,
+        username,
+        setUsername,
+        email,
+        setEmail,
+        password,
+        setPassword,
+      
       }}
     >
       {children}

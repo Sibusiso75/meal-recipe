@@ -6,14 +6,14 @@ import "./cocktail.css"
 function SingleCocktail() {
   const { id } = useParams();
   const [loading, setLoading] = useState(false);
-  const url = "https://wwwthecocktaildb.com/api/json/v1/1/lookup.php?i=";
+  const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`;
   const [cocktail, setCocktail] = useState(null);
 
   useEffect(() => {
     setLoading(true);
     async function getCocktails() {
       try {
-        const res = await fetch(`${url}${id}`);
+        const res = await fetch(`${url}`);
         const data = await res.json();
         if (data.drinks) {
           const {
