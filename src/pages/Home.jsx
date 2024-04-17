@@ -2,7 +2,7 @@ import React, {useState,useEffect} from "react";
 import SearchForm from "../components/SearchForm";
 import AllCocktails from "../components/AllCocktails";
 import { useGlobalContext } from "../context";
-import {useNavigate} from "react-router-dom"
+import {useNavigate, Link} from "react-router-dom"
 import axios from "axios"
 import {FaUserCircle, FaChevronUp,FaChevronDown} from "react-icons/fa"
 
@@ -16,8 +16,8 @@ function Home() {
     e.preventDefault()
     axios.get("https://mealapp-api-2.onrender.com/logout").then((response)=>{           
            if(response.data.status){
+             setLoggedIn(false)
                navigate("/login")
-               setLoggedIn(false)
            } 
     }).catch(err =>{
         console.log(err)
@@ -36,25 +36,45 @@ useEffect(()=>{
  })
 },[])
   return (
-    <main>
-      <div className="welcomeIntro">
-
-           <h3>Meal recipes </h3>
-             {loggedIn==true?
+    <div>
+      <span>
+                    
+             
                 <main>
-                  <span style={{color:"white"}} ><FaUserCircle/>{username}</span>
-                  <span onClick={()=>setDropDown(!dropDown)} style={{color:"whitesmoke",background:"black", borderRadius:"100%", padding:"10px"}}>{dropDown?<FaChevronUp/>:<FaChevronDown/>}
-                  </span>
-                 {dropDown ?<div style={{backround:"white", padding:"10px", width:"fit-content"}}>
-                  <button onClick={handleLogOut}>Logout</button></div>:null}
-               </main>
-               :
-                <div >
+                   {
+                    loggedIn==false? <div>
+                        <Link to="/login" style={{fontWeight:"bold",marginRight:"5px",color:"gray",float:"right", textDecoration:"underline"}}>Login</Link>
+                           <Link to="/register" style={{fontWeight:"bold",marginRight:"20px",color:"gray",float:"right", textDecoration:"underline"}}>Register</Link>
+                             <h2 style={{marginLeft:"5px"}}>Meal recipes </h2>
+ 
+                    </div>:
+                  <div>
+                  <h2 style={{marginLeft:"5px"}}>Meal recipes </h2>
+                  <div style={{marginLeft:"5px"}}>
+                  <span style={{color:"white"}} ><FaUserCircle/>{`Sibusiso75`}</span>
+                  <span onClick={()=>setDropDown(!dropDown)} style={{color:"whitesmoke",background:"black", borderRadius:"100%", padding:"10px"}}>
+                    {dropDown?<FaChevronUp/>:<FaChevronDown/>}</span>
 
-                  <button onClick={()=>navigate("/login")}>Log in</button>
+                  </div>
+
+
+                {dropDown==true? <div style={{marginLeft:"5px"}}>
+                  <button onClick={handleLogOut} className="btn1">Log out</button>
                 </div>
-            
-     } 
+                :
+               null
+                }
+
+
+                  </div>
+                  
+                   }
+                         
+
+               
+               </main>
+             
+     </span> 
            <br/>
 
 <p style={{textAlign:"center"}}>Looking for recipe to make your own delicious meal? we got you!
@@ -63,7 +83,7 @@ useEffect(()=>{
 </p>
 
 
-      </div>
+      
       <main style={{textAlign:"center"}}>
 
 <SearchForm />
@@ -72,7 +92,7 @@ useEffect(()=>{
        
     
      
-    </main>
+    </div>
   );
 }
 

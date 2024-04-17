@@ -27,14 +27,14 @@ let navigate = useNavigate()
         })
     }
   return (
-    <div style={{margin:"15px"}}>
+    <div style={{margin:"25px"}}>
        
     <Link to="/" style={{color:"gray",float:"right", textDecoration:"underline"}}>Browse</Link>
             <h2 style={{marginLeft:"10%"}}>Register</h2>
 
         
         <form onSubmit={handleSubmit} 
-            className="form">
+            className='form'>
        
            <br/>
            <input type="text" 

@@ -14,7 +14,6 @@ function Login() {
         Axios.post("https://mealapp-api-2.onrender.com/login", 
           { email, password}).then(response =>{
             if(response.data.status){
-
                 navigate("/")
             }
             else {
