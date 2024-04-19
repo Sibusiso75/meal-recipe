@@ -47,11 +47,11 @@ useEffect(()=>{
                            <Link to="/register" style={{fontWeight:"bold",marginRight:"20px",color:"gray",float:"right", textDecoration:"underline"}}>Register</Link>
                              <h2 style={{marginLeft:"5px"}}>Meal recipes </h2>
  
-                    </div>:
+                  </div>:
                   <div>
                   <h2 style={{marginLeft:"5px"}}>Meal recipes </h2>
                   <div style={{marginLeft:"5px"}}>
-                  <span style={{color:"white"}} ><FaUserCircle/>{`Sibusiso75`}</span>
+                  <span style={{color:"white"}} ><FaUserCircle/>{username}</span>
                   <span onClick={()=>setDropDown(!dropDown)} style={{color:"whitesmoke",background:"black", borderRadius:"100%", padding:"10px"}}>
                     {dropDown?<FaChevronUp/>:<FaChevronDown/>}</span>
 
@@ -84,10 +84,10 @@ useEffect(()=>{
 
 
       
-      <main style={{textAlign:"center"}}>
+      
 
-<SearchForm />
-      </main>
+<SearchForm/>
+<br /><br />
 <AllCocktails />
        
     

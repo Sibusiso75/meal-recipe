@@ -12,17 +12,18 @@ function SearchForm() {
     setSearchTerm(searchValue.current.value);
   }
   return (
-    <section style={{margin:"30px"}}>
-      <form onSubmit={(e) => e.preventDefault()}>
+    <div className="searchForm">
+      <form onSubmit={(e) => e.preventDefault()}  >
         <input
           type="text"
 
           ref={searchValue}
           placeholder="search your favourite meal..."
           onChange={searchCocktail}
+          className="searchForm"
         />
       </form>
-    </section>
+    </div>
   );
 }
 

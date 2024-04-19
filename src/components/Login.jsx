@@ -31,28 +31,27 @@ function Login() {
             <h2 style={{marginLeft:"10%"}}>Login</h2>
 
 
-        <form onSubmit={handleSubmit} className='form'>
+        <form onSubmit={handleSubmit}>
        
-           <br/>
           
             <input type="email" 
              required
             onChange={(e)=>setEmail(e.target.value)}
             
-            placeholder='Email'/><br/>
-            <br/>
+            placeholder='Email'/>
 
             <input type="password" 
              required
             onChange={(e)=>setPassword(e.target.value)}
             
-            placeholder='Password'/><br/><br/>
-            <button type="submit" className="btn2">Login</button><br/>
-            <Link to="/forgotPassword">Forgot Password?</Link>
+            placeholder='Password'/>
+            <button type="submit" className="btn2">Login</button>
+         
+        </form>
+        <Link to="/forgotPassword">Forgot Password?</Link>
             <p>Don't have an account?<Link to ="/register">
                 Sign up
             </Link></p>
-        </form>
             </div>
     </div>
   )

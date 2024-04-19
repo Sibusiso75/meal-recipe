@@ -2,8 +2,8 @@ import React from "react";
 import ReactLoading from "react-loading"
 function Loading() {
   return (
-    <div style={{ margin: "40px", boxAlign:"center" }}>
-      <ReactLoading type={'spokes'} color={"orange"} height={'20%'} width={'20%'}/>
+    <div style={{ marginLeft:"50px" }}>
+      <ReactLoading type={'spokes'} color={"white"} height={500} width={200}/>
      
     </div>
   );

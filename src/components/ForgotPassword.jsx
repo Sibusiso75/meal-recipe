@@ -28,29 +28,25 @@ function ForgotPassword() {
 
     }
   return (
-    <div>
-        <div style={{margin:"30px"}}>
-
-        <h2>Forgot Password</h2>
+    <>
+    
+        <h2 style={{marginLeft:"1%"}}>Forgot Password</h2>
         <form onSubmit={handleSubmit}>
-       
-             <label htmlFor="email">Email</label>
+
             <input type="email" 
             onChange={(e)=>setEmail(e.target.value)}
             required
 
             placeholder='Email'/>
-            <br /><br />
-           
+             <span className="backAndSend">
               <button onClick={()=>navigate("/login")} className="backHome">Go Back</button>
-
             <button type="submit" className="btn1">Send</button>
+              </span>
+              
 
-            
         </form>
-            </div>
             
-    </div>
+    </>
   )
 }
 

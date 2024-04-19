@@ -40,20 +40,11 @@ color:#ffffff8b;
         margin:5px;
         text-decoration: none;
         background:orange;
+        justify-content: flex-start;
         color:aliceblue;
         padding:10px;
         border-radius: 5px;
         width:100px;
-        font-weight: bold;
-      }
-      .btn2 {
-        margin:5px;
-        text-decoration: none;
-        background:orange;
-        color:rgb(255, 241, 240);
-        width:180px;
-        padding:10px;
-        
         font-weight: bold;
       }
      p{
@@ -84,14 +75,26 @@ color:#ffffff8b;
       gap:1rem;
       }
       
-      .form{
-        padding:15px; width:60%
-            ; height:30%; 
-      }
-     
-      input{
+      form, input, .btn2{
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        padding:10px;
+        border:none;
+        outline:none;
+        
+        gap:1.5rem;
         padding:10px;
       }
+    
+      
+      .btn2 {
+        background:orange;
+        width: 220px;
+    align-items: center;
+        font-weight: bold;
+      }
+      
       .itemsContainer>div{
         color:gray;
          font-weight: bold;
@@ -108,11 +111,12 @@ color:#ffffff8b;
       flex-direction: column;
       color:gray;
      } 
-     .inputSearch {
-         padding:10px;
-         padding-left:10px;
-         border-radius:10px;
-         width:80%;
+     .backAndSend{
+        display: flex;
+    }
+     .searchForm {
+       
+margin-left:20px;
      }
     .glassAndInfo {
          display: flex;
@@ -120,7 +124,7 @@ color:#ffffff8b;
          gap:2rem;
      }
 }
-@media screen  and (min-width:767px) and (max-width:1023px){
+@media screen  and (min-width:767px) and (max-width:1024px){
     .welcomeIntro{
         padding-left: 5px;
     }
@@ -141,13 +145,26 @@ color:#ffffff8b;
      height:300px;
      
      }
-     .form{
-        padding:40px; box-shadow:-1px 2px 2px 2px black; width:23%
-            ; height:50%;
-      }
-      input{
+     form, input, .btn2{
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        padding:10px;
+        border:none;
+        outline:none;
+        
+        gap:1.5rem;
         padding:10px;
       }
+    
+      
+      .btn2 {
+        background:orange;
+        width: 220px;
+    align-items: center;
+        font-weight: bold;
+      }
+      
       
      .itemsContainer>div{
         
@@ -187,6 +204,10 @@ color:#ffffff8b;
     .closeTap {
         margin-left:-45px;
     }
+    .searchForm {
+       
+        margin-left:150px;
+             }
     .cartNav {
         display: flex;
         justify-content:space-between;
@@ -219,23 +240,13 @@ color:#ffffff8b;
         margin:5px;
         text-decoration: none;
         background:orange;
+        justify-content: flex-start;
         color:aliceblue;
         padding:10px;
         border-radius: 5px;
         width:100px;
         font-weight: bold;
       }
-      .btn2 {
-        margin:5px;
-        text-decoration: none;
-        background:orange;
-        color:aliceblue;
-        width:180px;
-        
-        padding:10px;
-        font-weight: bold;
-      }
-   
 
    
     .glassAndInfo {
@@ -249,6 +260,9 @@ color:#ffffff8b;
         height:150px;
         width:150px;
     }
+    .backAndSend{
+        display: flex;
+    }
 }
 
 @media screen  and (min-width:1024px){
@@ -257,7 +271,9 @@ color:#ffffff8b;
        
         padding-left: 5px;
     }
-   
+    .backAndSend{
+        display: flex;
+    }
     .container{
         box-shadow:-1px 5px 4px 3px black; 
 
@@ -273,12 +289,35 @@ color:#ffffff8b;
      height:300px;
      
      }
+     .backAndSend{
+        display: flex;
+    }
      
-     .form{
-         padding:10px;height:23%; box-shadow:-1px 2px 2px 2px black; width:200px; 
+
+      form, input, .btn2{
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        padding:10px;
+        border:none;
+        outline:none;
+        
+        gap:1.3rem;
+        padding:10px;
       }
-     
-     
+    
+      
+      .btn2 {
+        background:orange;
+        width: 220px;
+    align-items: center;
+        font-weight: bold;
+      }
+      
+      .searchForm {
+       
+        margin-left:200px;
+             }
      
      .itemsContainer>div{
         
@@ -315,6 +354,7 @@ color:#ffffff8b;
     .closeTap {
         margin-left:-45px;
     }
+
     .cartNav {
         display: flex;
         justify-content:space-between;
@@ -346,26 +386,18 @@ color:#ffffff8b;
       font-weight: bold;
     }
     .btn1 {
+        margin:5px;
         text-decoration: none;
         background:orange;
-        justify-content: center;
+        justify-content: flex-start;
         color:aliceblue;
         padding:10px;
         border-radius: 5px;
         width:100px;
-
         font-weight: bold;
       }
     
-      .btn2 {
-        text-decoration: none;
-        background:orange;
-        color:aliceblue;
-        width:170px;
-        font-weight: bold;
-        padding:5px;
-
-      }
+     
    
 
 
@@ -375,7 +407,7 @@ color:#ffffff8b;
         justify-content: space-between;
         gap:1rem;
     }
-  
+
     /* .photo {
          
         height:200px;

@@ -33,35 +33,29 @@ let navigate = useNavigate()
             <h2 style={{marginLeft:"10%"}}>Register</h2>
 
         
-        <form onSubmit={handleSubmit} 
-            className='form'>
+        <form onSubmit={handleSubmit}>
        
-           <br/>
+          
            <input type="text" 
           required
             onChange={(e)=>setUsername(e.target.value)}
             
             
-            placeholder='Username'/><br/><br/>
+            placeholder='Username'/>
             <input type="email" 
               required
             onChange={(e)=>setEmail(e.target.value)}
-            
-            placeholder='Email'/><br/>
-            <br/>
-
+            placeholder='Email'/>
             <input type="password" 
-            
             onChange={(e)=>setPassword(e.target.value)}
             required
             placeholder='Password'/>
-            <br /><br />
-            <button type="submit" className='btn2'>Sign up</button><br/>
-            
-            <p>Already have an account?<Link to ="/login">
+            <button type="submit" className='btn2'>Sign up</button>
+           
+        </form>
+        <p>Already have an account? <Link to ="/login">
                 Login
             </Link></p>
-        </form>
     </div>
   )
 }
