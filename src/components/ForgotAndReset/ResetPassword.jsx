@@ -1,6 +1,6 @@
 import axios from "axios"
 import { Link, useNavigate, useParams } from 'react-router-dom'
-import { useGlobalContext } from '../context'
+import { useGlobalContext } from '../../context'
 import {toast} from "react-toastify"
 
 function ResetPassword() {

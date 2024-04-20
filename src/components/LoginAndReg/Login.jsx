@@ -1,7 +1,7 @@
 import Axios from "axios"
 import { Link, useNavigate } from 'react-router-dom'
 import {toast} from "react-toastify"
-import { useGlobalContext } from '../context'
+import { useGlobalContext } from '../../context'
 
 function Login() {
     const {loading, email, setEmail,password, setPassword, setLoggedIn,setUsername,username} = useGlobalContext()
@@ -29,7 +29,7 @@ function Login() {
          <div style={{margin:"15px"}}>
          <Link to="/" style={{color:"gray",float:"right", textDecoration:"underline"}}>Browse</Link>
             <h2 style={{marginLeft:"10%"}}>Login</h2>
-
+        
 
         <form onSubmit={handleSubmit}>
        
@@ -49,7 +49,7 @@ function Login() {
          
         </form>
         <Link to="/forgotPassword">Forgot Password?</Link>
-            <p>Don't have an account?<Link to ="/register">
+            <p>Don't have an account? <Link to ="/register">
                 Sign up
             </Link></p>
             </div>

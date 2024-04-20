@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import  axios from "axios"
 import { Link, useNavigate } from 'react-router-dom'
 import {toast} from "react-toastify"
-import { useGlobalContext } from '../context'
+import { useGlobalContext } from '../../context'
 
 function SignUp() {
     const {username, setUsername, email, setEmail, password, setPassword} = useGlobalContext()
@@ -15,14 +15,13 @@ let navigate = useNavigate()
         axios.post("https://mealapp-api-2.onrender.com/register", 
            {username, email, password}).then((response)=>{           
                if(response.data.status){
-                   toast.success("User successfully registered")
-                   navigate("/login")
+                   toast.success(response.data.message)
                } else{
-                toast.error("User already exists")
+                toast.error(response.data.message)
                }
         }).catch(err =>{
             console.log("Error")
-            toast.error("Error")
+            toast.error("No internet access")
 
         })
     }
@@ -37,6 +36,7 @@ let navigate = useNavigate()
        
           
            <input type="text" 
+           minLength={2}
           required
             onChange={(e)=>setUsername(e.target.value)}
             
@@ -47,6 +47,8 @@ let navigate = useNavigate()
             onChange={(e)=>setEmail(e.target.value)}
             placeholder='Email'/>
             <input type="password" 
+                       minLength={6}
+                       maxLength={30}
             onChange={(e)=>setPassword(e.target.value)}
             required
             placeholder='Password'/>

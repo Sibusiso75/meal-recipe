@@ -2,7 +2,7 @@
 import axios from "axios"
 import { useNavigate } from 'react-router-dom'
 import {toast} from "react-toastify"
-import { useGlobalContext } from '../context'
+import { useGlobalContext } from '../../context'
 
 function ForgotPassword() {
   const { email, setEmail} = useGlobalContext()

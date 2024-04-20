@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Loading from "./Loading";
 import  axios from "axios"
-import { useGlobalContext } from "../context";
+import { useGlobalContext } from "../../context";
 import CocktailList from "./CocktailList";
 import {Link, useNavigate} from "react-router-dom"
 
