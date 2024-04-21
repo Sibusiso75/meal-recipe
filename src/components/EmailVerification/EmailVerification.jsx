@@ -5,10 +5,10 @@ import { useParams } from 'react-router-dom'
 function EmailVerification() {
     const [validUrl, setValidUrl]=useState(false)
     let param = useParams()
-
+//I need to push the code to github
     async function verifyLink(){
     try {
-        const url = `https://mealapp-api-2.onrender.com/${params.id}verify/${param.token}`
+        const url = `https://mealapp-api-2.onrender.com/users/${param.id}/verify/${param.token}`
         const {data} = await axios.get(url)
         console.log(data)
         setValidUrl(true)        
