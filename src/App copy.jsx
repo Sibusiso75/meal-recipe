@@ -1,17 +1,15 @@
-import React, {lazy, Suspense} from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-const SingleCocktail =  lazy(()=>import("./components/SingleCocktail"))
-const Home =  lazy(()=>import("./pages/Home"))
-const Login =  lazy(()=>import("./components/Login"))
-const SignUp =  lazy(()=>import("./components/SignUp"))
-const ForgotPassword =  lazy(()=>import("./components/ForgotPassword"))
-const ResetPassword =   lazy(()=>import("./components/ResetPassword"))
-import Loading from "./components/Home/Loading";
+import SingleCocktail from "./components/SingleCocktail";
+import Home from "./pages/Home";
+import Login from "./components/Login";
+import SignUp from "./components/SignUp";
+import ForgotPassword from "./components/ForgotPassword";
+import ResetPassword from "./components/ResetPassword";
 // import EmailVerification from "./components/EmailVerification/EmailVerification";
 function App() {
   return (
     <Router>
-        <Suspense  fallback={<Loading/>}>
       <Routes>
       <Route path="/" element={<Home />}></Route>
       <Route pa h="/register" element={<SignUp/>}></Route>
@@ -22,7 +20,6 @@ function App() {
       <Route path="/meal/:id" element={<SingleCocktail />}></Route>
         <Route path="*" element={<h6>404 - Not page found</h6>}></Route>
       </Routes>
-        </Suspense>
     </Router>
   );
 }

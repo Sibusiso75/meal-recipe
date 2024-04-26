@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
+import Loading from "./Loading";
 
 function SingleCocktail() {
   const { id } = useParams();
+  const [loading, setLoading] = useState(false);
   const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`;
   const [cocktail, setCocktail] = useState([]);
 
   useEffect(() => {
+    setLoading(true);
     async function getCocktails() {
       try {
         const res = await fetch(`${url}`);
@@ -67,11 +70,15 @@ function SingleCocktail() {
         setLoading(false);
       } catch (error) {
         console.log(error);
+        setLoading(false);
       }
     }
     getCocktails();
   }, [id]);
-  
+  if (loading) {
+    return <Loading />;
+  }
+
   const { name, image, category, instructions, ingredients, area} =
     cocktail;
   return (
@@ -87,7 +94,9 @@ function SingleCocktail() {
       <p>Category: {category}</p>
       <p>Instructions: {instructions}</p>
       <p>Ingredients: {ingredients}
-      <p>Area: {area}</p>    
+      <p>Area: {area}</p>
+        
+      
         </p>
         </div>
       </div>

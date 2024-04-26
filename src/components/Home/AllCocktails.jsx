@@ -6,14 +6,10 @@ import CocktailList from "./CocktailList";
 import {Link, useNavigate} from "react-router-dom"
 
 function AllCocktails({}) {
-  const { cocktails, loading, loggedIn, setLoggedIn,username } = useGlobalContext();
+  const { cocktails,  loggedIn, setLoggedIn,username } = useGlobalContext();
   let navigate = useNavigate()
 
   
-
-  if (loading) {
-    return <Loading />
-  }
   if (cocktails.length < 1) {
     return <p>No results found</p>;
   }

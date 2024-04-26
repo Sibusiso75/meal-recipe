@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import  axios from "axios"
 import { Link, useNavigate } from 'react-router-dom'
 import {toast} from "react-toastify"
@@ -16,6 +16,7 @@ let navigate = useNavigate()
            {username, email, password}).then((response)=>{           
                if(response.data.status){
                    toast.success(response.data.message)
+                   navigate("/")
                } else{
                 toast.error(response.data.message)
                }

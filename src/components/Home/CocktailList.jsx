@@ -18,7 +18,6 @@ function CocktailList({ id, name, image }) {
         </Link>
         <div className="glassAndInfo">
           <p>{name}</p>
-          
         </div>
         </div>
     </>
