@@ -14,7 +14,7 @@ function App() {
         <Suspense  fallback={<Loading/>}>
       <Routes>
       <Route path="/" element={<Home />}></Route>
-      <Route pa h="/register" element={<SignUp/>}></Route>
+      <Route path="/register" element={<SignUp/>}></Route>
       <Route path="/login" element={<Login/>}></Route>
       <Route path="/forgotPassword" element={<ForgotPassword/>}></Route>
       <Route path="/resetPassword/:token" element={<ResetPassword/>}></Route>
