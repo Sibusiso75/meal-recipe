@@ -1,6 +1,6 @@
 import React, {useState,useEffect} from "react";
-import SearchForm from "../components/SearchForm";
-import AllCocktails from "../components/AllCocktails";
+import SearchForm from "../components/Home/SearchForm";
+import AllCocktails from "../components/Home/AllCocktails";
 import { useGlobalContext } from "../context";
 import {useNavigate, Link} from "react-router-dom"
 import axios from "axios"
