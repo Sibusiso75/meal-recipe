@@ -1,12 +1,10 @@
 import React, { useEffect } from "react";
-import Loading from "./Loading";
-import  axios from "axios"
 import { useGlobalContext } from "../../context";
 import CocktailList from "./CocktailList";
-import {Link, useNavigate} from "react-router-dom"
+import {useNavigate} from "react-router-dom"
 
 function AllCocktails({}) {
-  const { cocktails,  loggedIn, setLoggedIn,username } = useGlobalContext();
+  const { cocktails } = useGlobalContext();
   let navigate = useNavigate()
 
   
@@ -16,10 +14,7 @@ function AllCocktails({}) {
 
   return (
     <div className="itemsContainer">
-   
-
-      {cocktails.map((cocktail) => {
-        
+      {cocktails.map((cocktail) => {     
         return <CocktailList key={cocktail.id} {...cocktail} />;
         
       })}

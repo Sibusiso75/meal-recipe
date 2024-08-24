@@ -9,20 +9,20 @@ function SignUp() {
    
 
 let navigate = useNavigate()
+//https://mealapp-api-2.onrender.com/register
 
     function handleSubmit(e){
         e.preventDefault()
-        axios.post("https://mealapp-api-2.onrender.com/register", 
+        axios.post("http://localost:5000/register", 
            {username, email, password}).then((response)=>{           
                if(response.data.status){
                    toast.success(response.data.message)
-                   navigate("/")
                } else{
                 toast.error(response.data.message)
                }
         }).catch(err =>{
             console.log("Error")
-            toast.error("No internet access")
+            toast.error("Error")
 
         })
     }

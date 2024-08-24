@@ -1,35 +1,42 @@
-import React,{useState, useEffect} from 'react'
-import axios from "axios"
+import React, {useState, useEffect, Fragment} from 'react'
 import {FaCheck} from "react-icons/fa"
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
+
 function EmailVerification() {
-    const [validUrl, setValidUrl]=useState(false)
+    const [validUrl, setValidUrl] = useState(false)
+    let navigate = useNavigate()
     let param = useParams()
-//I need to push the code to github
-    async function verifyLink(){
-    try {
-        const url = `https://mealapp-api-2.onrender.com/users/${param.id}/verify/${param.token}`
-        const {data} = await axios.get(url)
-        console.log(data)
-        setValidUrl(true)        
-    } catch (error) {
-        console.log("Error")
-        setValidUrl(false)        
 
-
-    }
-    }
     useEffect(()=>{
-        verifyLink()
-    },[param])
-  return (
-    <div>
-        {
-
-        validUrl?<h2>EMAIL VERIFIFIED <FaCheck/></h2>
-        : <h2>404 - Page not found</h2>
+        async function verifyEmailUrl(){
+            try {
+        const url = `http://localhost:5000/users/${param.id}/verify/${paran.token}`
+              const {data} = await axios.get(url)
+              console.log(data)
+              setValidUrl(true)
+            } catch (error) {
+                console.log(error)
+                setValidUrl(false)
+            }
         }
-    </div>
+        verifyEmailUrl()
+    },[param])
+    
+  return (
+    <Fragment>
+        {validUrl ?
+        <div>
+            <h4>
+            Email verified successfully <FaCheck style={{fontSize:"30px"}}/>
+            </h4>
+            <button onClick={()=>navigate("/login")}></button>
+
+        </div>:
+        <div>
+            <h4>404 - Page not found</h4>
+        </div>
+        }
+    </Fragment>
   )
 }
 

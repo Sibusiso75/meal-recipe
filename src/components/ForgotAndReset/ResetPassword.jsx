@@ -12,7 +12,7 @@ function ResetPassword() {
   
     function handleSubmit(e){
         e.preventDefault()
-       axios.post(`https://mealapp-api-2.onrender.com/reset-password/${token}`, 
+       axios.post(`http://localhost:5000/reset-password/${token}`, 
            {password}).then(response =>{
             if(response.data.status){
                 toast.success("Password has been successfully updated")

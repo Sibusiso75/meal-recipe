@@ -14,7 +14,7 @@ function Home() {
   axios.defaults.withCredentials=true;
   function handleLogOut(e){
     e.preventDefault()
-    axios.get("https://mealapp-api-2.onrender.com/logout").then((response)=>{           
+    axios.get("http://localhost:5000/logout").then((response)=>{           
            if(response.data.status){
              setLoggedIn(false)
                navigate("/login")
@@ -24,7 +24,7 @@ function Home() {
     })
 }
 useEffect(()=>{
- axios.get("https://mealapp-api-2.onrender.com/verify")
+ axios.get("http://localhost:5000/verify")
  .then(res=>{
   if(res.data.status){
     setLoggedIn(res.data.status)
@@ -78,14 +78,7 @@ useEffect(()=>{
            <br/>
 
 <p style={{textAlign:"center"}}>Looking for recipe to make your own delicious meal? we got you!
-
-
 </p>
-
-
-      
-      
-
 <SearchForm/>
 <br /><br />
 <AllCocktails />

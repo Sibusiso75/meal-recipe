@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
+import Loading from "./Home/Loading";
 
 function SingleCocktail() {
   const { id } = useParams();
@@ -64,7 +65,6 @@ function SingleCocktail() {
         } else {
           setCocktail(null);
         }
-        setLoading(false);
       } catch (error) {
         console.log(error);
       }
@@ -72,6 +72,7 @@ function SingleCocktail() {
     getCocktails();
   }, [id]);
   
+
   const { name, image, category, instructions, ingredients, area} =
     cocktail;
   return (
@@ -87,7 +88,9 @@ function SingleCocktail() {
       <p>Category: {category}</p>
       <p>Instructions: {instructions}</p>
       <p>Ingredients: {ingredients}
-      <p>Area: {area}</p>    
+      <p>Area: {area}</p>
+        
+      
         </p>
         </div>
       </div>

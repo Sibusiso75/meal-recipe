@@ -7,11 +7,12 @@ function Login() {
     const {loading, email, setEmail,password, setPassword, setLoggedIn,setUsername,username} = useGlobalContext()
        
     let navigate = useNavigate()
+    // https://mealapp-api-2.onrender.com/login
 
     Axios.defaults.withCredentials=true;
     function handleSubmit(e){
         e.preventDefault()
-        Axios.post("https://mealapp-api-2.onrender.com/login", 
+        Axios.post("http://localhost:5000/login", 
           { email, password}).then(response =>{
             if(response.data.status){
                 navigate("/")

@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 
 function CocktailList({ id, name, image }) {
   return (
-    <>
-      <div className="container">
+      <div className="itemsContainer">
 
      
       
@@ -20,7 +19,6 @@ function CocktailList({ id, name, image }) {
           <p>{name}</p>
         </div>
         </div>
-    </>
   );
 }
 

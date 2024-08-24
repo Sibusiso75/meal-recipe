@@ -12,7 +12,7 @@ function ForgotPassword() {
 
     function handleSubmit(event){
       event.preventDefault()
-        axios.post("https://mealapp-api-2.onrender.com/forgot-password", 
+        axios.post("http://localhost:5000/forgot-password", 
         {email}).then((response) =>{
          if(response.data.status){
               toast.info("Reset password link has been sent to your email")
