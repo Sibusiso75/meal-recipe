@@ -13,7 +13,9 @@ function AllCocktails({}) {
   }
 
   return (
-    <div className="itemsContainer">
+    <div style={{display:"flex",gap:"1rem"
+    , flexWrap:"wrap",
+}}>
       {cocktails.map((cocktail) => {     
         return <CocktailList key={cocktail.id} {...cocktail} />;
         
