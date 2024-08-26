@@ -106,11 +106,7 @@ color:#ffffff8b;
          width:100%;
 
      }
-     .glassAndInfo{
-      display:flex;
-      flex-direction: column;
-      color:gray;
-     } 
+    
      .backAndSend{
         display: flex;
     }
@@ -118,11 +114,7 @@ color:#ffffff8b;
        
 margin-left:20px;
      }
-    .glassAndInfo {
-         display: flex;
-         justify-content: space-between;
-         gap:2rem;
-     }
+    
 }
 @media screen  and (min-width:767px) and (max-width:1024px){
     .welcomeIntro{
@@ -180,12 +172,12 @@ margin-left:20px;
      }
     
 
-    .glassAndInfo{
-     display:flex;
-     flex-direction: column;
-     align-items: center;
-     padding:10px;
-    }
+     .glassAndInfo{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        padding:10px;
+       }
     
     .inputSearch {
         padding:3px;
@@ -244,11 +236,7 @@ margin-left:20px;
       }
 
    
-    .glassAndInfo {
-        display: flex;
-        justify-content: space-between;
-        gap:2rem;
-    }
+    
    
     .photo {
          
@@ -331,12 +319,7 @@ margin-left:20px;
         cursor: pointer;
 
      }
-    .glassAndInfo{
-     display:flex;
-     flex-direction: column;
-     align-items: center;
-     padding:10px;
-    }
+   
     
     
     .btns:hover {
@@ -393,12 +376,12 @@ margin-left:20px;
 
 
    
-    .glassAndInfo {
-        display: flex;
-        justify-content: space-between;
-        gap:1rem;
-    }
-
+      .glassAndInfo{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        padding:10px;
+       }
      .photo {
          
         height:200px;
