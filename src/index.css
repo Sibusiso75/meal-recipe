@@ -133,6 +133,8 @@ margin-left:20px;
       flex-wrap: wrap;
       justify-content: space-evenly;
      width:fit-content;
+     flex-direction: column;
+
      
      
      }
@@ -270,6 +272,8 @@ margin-left:20px;
      width:fit-content;
      
      height:300px;
+     flex-direction: column;
+
      
      }
      .backAndSend{
