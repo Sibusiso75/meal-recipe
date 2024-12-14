@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState,useEffect} from "react";
 import SearchForm from "../components/Home/SearchForm";
 import AllCocktails from "../components/Home/AllCocktails";
@@ -72,19 +73,38 @@ useEffect(()=>{
                          
 
                
+=======
+import SearchForm from "../Home/SearchForm";
+import AllCocktails from "../Home/AllCocktails";
+
+function Home() {
+  return (
+    <div>
+      <span>          
+                <main>            
+                  <div>
+                  <h2 style={{marginLeft:"5px"}}>Meal recipes </h2>
+                  </div>                         
+>>>>>>> 4e57375 (first c)
                </main>
              
      </span> 
            <br/>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4e57375 (first c)
 <p style={{textAlign:"center"}}>Looking for recipe to make your own delicious meal? we got you!
 </p>
 <SearchForm/>
 <br /><br />
 <AllCocktails />
+<<<<<<< HEAD
        
     
      
+=======
+>>>>>>> 4e57375 (first c)
     </div>
   );
 }
