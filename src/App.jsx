@@ -9,7 +9,6 @@ function App() {
     <Router>
         <Suspense fallback={<Loading/>}>
       <Routes>
-
       <Route path="/" element={<Home />}></Route>
  <Route path="/meal/:id" element={<SingleCocktail />}></Route>
         <Route path="*" element={<h6>404 - Not page found</h6>}></Route>
