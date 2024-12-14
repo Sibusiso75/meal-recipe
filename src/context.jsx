@@ -5,13 +5,6 @@ const url = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
 const AppContext = React.createContext();
 function AppProvider({ children }) {
   const [searchTerm, setSearchTerm] = useState("a");
-<<<<<<< HEAD
-  const [username, setUsername] = useState("")
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
-    const [loggedIn, setLoggedIn]= useState(false)
-=======
->>>>>>> 4e57375 (first c)
   const [cocktails, setCocktails] = useState([]);
 
   const getData = useCallback(async () => {
@@ -46,20 +39,7 @@ function AppProvider({ children }) {
     <AppContext.Provider
       value={{
         setSearchTerm,
-<<<<<<< HEAD
-        loggedIn, 
-        setLoggedIn,
-        cocktails,
-        username,
-        setUsername,
-        email,
-        setEmail,
-        password,
-        setPassword,
-      
-=======
         cocktails,      
->>>>>>> 4e57375 (first c)
       }}
     >
       {children}
