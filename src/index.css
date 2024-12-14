@@ -1,9 +1,7 @@
 body {
-  background:lightslategrey;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background:rgb(51, 49, 49);
 
-color:white;
+color:lightgray;
   margin: 0;
   padding: 0;
 
@@ -18,17 +16,22 @@ color:white;
       margin: 0px;
     
    }
-   .cocktails{
+   .cont {
     display:flex;
-    gap:2rem;
+    gap:1rem;
     flex-wrap:wrap;
     margin:30px;
-  }
+   }
+   
+ 
    
    .glassAndInfo{
       display:flex;
       flex-direction: column;
       align-items: center;
+      background:rgb(37, 37, 37);
+      color:white;
+
       padding:10px;
      }
    .backHome {
@@ -101,7 +104,6 @@ color:white;
 
    } */
    .photo {
-       height:100%;
        width:fit-content;
        /* margin:20px; */
 
@@ -150,7 +152,12 @@ margin-left:20px;
       padding:10px;
     }
   
-    
+    .cont {
+      display:flex;
+      gap:1rem;
+      flex-wrap:wrap;
+      margin:30px;
+     }
     .btn2 {
       background:orange;
       width: 220px;
@@ -172,16 +179,14 @@ margin-left:20px;
   
       cursor: pointer;
    }
-   .cocktails{
-    display:flex;
-    gap:2rem;
-    flex-wrap:wrap;
-    margin:30px;
-  }
+   
 
    .glassAndInfo{
       display:flex;
       flex-direction: column;
+      background:rgb(37, 37, 37);
+      color:white;
+
       align-items: center;
       padding:10px;
      }
@@ -271,11 +276,9 @@ margin-left:20px;
 
 
   }
-  .cocktails{
-    display:flex;
-    gap:2rem;
-    flex-wrap:wrap;
-    margin-left:100px;
+  .cocktails:hover{
+    transform: scale(1.1);
+    cursor: pointer;
   }
   .itemsContainer {
       display: flex;
@@ -315,6 +318,13 @@ margin-left:20px;
     .searchForm {
      
       margin-left:200px;
+           }
+
+           .cont {
+            display:flex;
+            gap:3rem;
+            flex-wrap: wrap;
+            margin:50px;
            }
    
    .itemsContainer>div{
@@ -395,11 +405,16 @@ margin-left:20px;
       display:flex;
       flex-direction: column;
       align-items: center;
+      background:rgb(37, 37, 37);
+      color:white;
       padding:10px;
      }
+    
+
    .photo {
        
-      height:200px;
+      height:250px;
       width:200px;
   } 
+  
 }

@@ -1,11 +1,8 @@
-import React, { useEffect } from "react";
 import { useGlobalContext } from "../../context";
 import CocktailList from "./CocktailList";
-import {useNavigate} from "react-router-dom"
 
 function AllCocktails({}) {
   const { cocktails } = useGlobalContext();
-  let navigate = useNavigate()
 
   
   if (cocktails.length < 1) {
@@ -13,9 +10,7 @@ function AllCocktails({}) {
   }
 
   return (
-    <div style={{display:"flex",gap:"1rem"
-    , flexWrap:"wrap",
-}}>
+    <div className="cont">
       {cocktails.map((cocktail) => {     
         return <CocktailList key={cocktail.id} {...cocktail} />;
         

@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { useParams, Link, useNavigate } from "react-router-dom";
-import Card from '@mui/material/Card';
+import { useParams, useNavigate } from "react-router-dom";
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
-import CardActions from '@mui/material/CardActions';
 import Typography from '@mui/material/Typography';
-import { Button, CardActionArea } from "@mui/material";
+import { FaHome } from "react-icons/fa";
 function SingleCocktail() {
   const { id } = useParams();
   const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`;
@@ -81,21 +79,23 @@ function SingleCocktail() {
     cocktail;
   return (
     <div>
-  <Button size="large" onClick={()=>navigate("/")}>Back</Button>
-    <div style={{ margin:"30px",border:"none",background:"lightslategrey" }} key={id} onClick={()=>navigate(`/meal/${id}`)}>
-          <CardActionArea >
-          <CardActions >
-     </CardActions>
+                    <button onClick={()=>navigate("/")} style={{color:"white",margin:"5px", background:"green", fontWeight:"bold"}}>
+                      Go back <FaHome/>
+                      </button>             
+   
+       <div style={{ margin:"30px",border:"none"}}>
+
           <CardMedia
         component="img"
-
-        sx={{ maxWidth: 345 }}
+        
+        sx={{ maxWidth: 200 }}
         image={image}
         title={name}
-      /> 
-     <CardContent className="glassAndInfo">
+        /> 
+        </div>
+     <CardContent>
       
-       <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+       <Typography>
     
           
        {name}
@@ -107,10 +107,8 @@ function SingleCocktail() {
 
      </CardContent>
    
-          </CardActionArea>
     
        
-  </div>
     </div>
   );
 }

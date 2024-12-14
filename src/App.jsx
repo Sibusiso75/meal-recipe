@@ -1,6 +1,6 @@
 import React, {lazy, Suspense} from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-const SingleCocktail = lazy(()=>import("./components/SingleCocktail"));
+import SingleCocktail from "./pages/SingleCocktail";
 const Home = lazy(()=>import("./pages/Home"));
 import Loading from "./components/Home/Loading";
 

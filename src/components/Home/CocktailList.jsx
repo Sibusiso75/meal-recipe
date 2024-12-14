@@ -1,25 +1,31 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
+import {  useNavigate } from "react-router-dom";
+import { Card, CardActionArea, CardActions, CardContent, CardMedia, Typography } from "@mui/material";
 function CocktailList({ id, name, image }) {
+  let navigate = useNavigate()
   return (
-      <div className="itemsContainer">
+      <Card className="cocktails" key={id} onClick={()=>navigate(`meal/${id}`)}>
 
      
-      
-        <Link to={`/meal/${id}`}>
+           <CardMedia
+        component="img"
 
-          <img
-            src={image}
-            alt={name}
-           className="photo"
-          ></img>
-        </Link>
-        <div className="glassAndInfo">
-          <p>{name}</p>
-        </div>
-        </div>
+       className="photo"
+        image={image}
+        title={name}
+      /> 
+        <CardContent className="glassAndInfo">
+
+<Typography variant="body2" >
+{name}
+</Typography>
+</CardContent>
+
+        </Card>
   );
 }
 
 export default CocktailList;
+
+
+

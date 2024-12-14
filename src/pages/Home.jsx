@@ -1,6 +1,5 @@
-import SearchForm from "../Home/SearchForm";
-import AllCocktails from "../Home/AllCocktails";
-
+import AllCocktails from "../components/Home/AllCocktails";
+import SearchForm from "../components/Home/SearchForm";
 function Home() {
   return (
     <div>
